@@ -26,9 +26,7 @@
     </thead>
     <tbody>
 
-        @*Please Uncomment the code below*@
-
-        @*@if (Model != null)
+        @if (Model != null)
         {
             @foreach (var item in Model.Studios)
             {
@@ -39,5 +37,5 @@
                     <td> @item.NoOfEmployees </td>
                 </tr>
             }
-        }*@
+        }
 </table>

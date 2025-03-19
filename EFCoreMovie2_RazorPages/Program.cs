@@ -1,3 +1,5 @@
+using EFCoreMovie2_RazorPages.Models;
+
 namespace EFCoreMovie1_RazorPages
 {
     public class Program
@@ -8,6 +10,7 @@ namespace EFCoreMovie1_RazorPages
 
             // Add services to the container.
             builder.Services.AddRazorPages();
+            builder.Services.AddDbContext<MovieDBContext>();
 
             var app = builder.Build();
 
