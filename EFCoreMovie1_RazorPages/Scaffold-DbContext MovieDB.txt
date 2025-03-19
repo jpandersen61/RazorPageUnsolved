@@ -1,0 +1,9 @@
+1. Start with the following command template: Scaffold-DbContext "<database connection string>"  Microsoft.EntityFrameworkCore.SqlServer -OutputDir  Models -ContextDir Models  -Context MovieDBContext -DataAnnotations -Force
+2. Copy your <database connection string> from e.g. SQL Server Object Explorer. 
+3. Finish your Scaffold-DbContext command by pasting in your <Database connection string>".   
+4. Copy the finished commandline to the prompt in Tools -> NuGet Package Manager -> Package Manager Console
+5. Perform the command with an enter 
+
+
+
+   
