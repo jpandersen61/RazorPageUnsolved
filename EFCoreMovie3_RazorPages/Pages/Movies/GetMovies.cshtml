@@ -1,0 +1,31 @@
+﻿@page
+@model EFCoreMovie1_RazorPages.Pages.Movies.GetMoviesModel
+@{
+}
+
+<h1>List of movies</h1>
+<h4 style="color:red"> List of movies</h4>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Year</th>
+            <th>Running time (min)</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @if (Model != null)
+        {
+            @foreach (var item in Model.Studios)
+            {
+                <tr>
+                    <td> @item.Id </td>
+                    <td> @item.Title </td>
+                    <td> @item.Year  </td>
+                    <td> @item.RunningTimeInMins </td>
+                </tr>
+            }
+        }
+</table>
