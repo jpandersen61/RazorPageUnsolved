@@ -1,4 +1,7 @@
 using EFCoreMovie2_RazorPages.Models;
+using EFCoreMovie3_RazorPages.EFServices;
+using EFCoreMovie3_RazorPages.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace EFCoreMovie1_RazorPages
 {
@@ -11,6 +14,9 @@ namespace EFCoreMovie1_RazorPages
             // Add services to the container.
             builder.Services.AddRazorPages();
             builder.Services.AddDbContext<MovieDBContext>();
+            builder.Services.AddTransient<IMovieService,EFMovieService>();
+            builder.Services.AddTransient<IStudioService,EFStudioService>();
+
 
             var app = builder.Build();
 

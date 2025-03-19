@@ -13,10 +13,10 @@ namespace EFCoreMovie1_RazorPages.Pages.Movies
         {
             context = service;
         }
-        public IEnumerable<Movie> Studios { get; set; } = new List<Movie>();
+        public IEnumerable<Movie> Movies { get; set; } = new List<Movie>();
         public void OnGet()
         {
-            Studios = context.Movies;
+            Movies = context.Movies;
         }
     }
 }
