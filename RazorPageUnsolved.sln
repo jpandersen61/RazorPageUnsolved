@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreMovie2_RazorPages", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreMovie3_RazorPages", "EFCoreMovie3_RazorPages\EFCoreMovie3_RazorPages.csproj", "{DEEBE923-97F0-466B-BE20-F7B9AE24C143}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreMovie3_RazorPages_Solution", "EFCoreMovie3_RazorPages - Solution\EFCoreMovie3_RazorPages_Solution.csproj", "{EFA4DEDB-3ED6-4FE7-81F1-745DB4E873B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCoreTeaching_RazorPages", "EFCoreTeaching_RazorPages\EFCoreTeaching_RazorPages\EFCoreTeaching_RazorPages.csproj", "{D25277B9-AA4B-4E5A-9581-5B561B210B39}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{DEEBE923-97F0-466B-BE20-F7B9AE24C143}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DEEBE923-97F0-466B-BE20-F7B9AE24C143}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DEEBE923-97F0-466B-BE20-F7B9AE24C143}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFA4DEDB-3ED6-4FE7-81F1-745DB4E873B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFA4DEDB-3ED6-4FE7-81F1-745DB4E873B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFA4DEDB-3ED6-4FE7-81F1-745DB4E873B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFA4DEDB-3ED6-4FE7-81F1-745DB4E873B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D25277B9-AA4B-4E5A-9581-5B561B210B39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D25277B9-AA4B-4E5A-9581-5B561B210B39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D25277B9-AA4B-4E5A-9581-5B561B210B39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D25277B9-AA4B-4E5A-9581-5B561B210B39}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
