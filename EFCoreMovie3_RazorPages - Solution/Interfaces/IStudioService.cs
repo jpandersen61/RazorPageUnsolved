@@ -5,9 +5,9 @@ namespace EFCoreMovie3_RazorPages.Interfaces
     public interface IStudioService
     {        
         public IEnumerable<Studio> GetStudios();
-        IEnumerable<Studio> GetStudios(string name);
-        void AddStudio(Studio studio);
-        Studio GetStudioById(int id);
-        void DeleteStudio(Studio studio);
+        public IEnumerable<Studio> GetStudios(string name);
+        public void AddStudio(Studio studio);
+        public Studio ? GetStudioById(int id);
+        public void DeleteStudio(Studio studio);
     }
 }

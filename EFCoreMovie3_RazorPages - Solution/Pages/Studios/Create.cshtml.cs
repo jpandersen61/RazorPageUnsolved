@@ -17,10 +17,11 @@ namespace EFCoreMovie3_RazorPages_Solution.Pages.Studios
         public CreateModel(IStudioService service)
         {
             this.service = service;
+            Studio = new Studio();
         }
         public void OnGet()
         {
-            Studio = new Studio();
+            
         }
 
 

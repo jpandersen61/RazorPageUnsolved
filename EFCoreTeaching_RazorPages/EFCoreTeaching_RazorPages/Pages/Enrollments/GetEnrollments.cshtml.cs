@@ -5,21 +5,22 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace EFCoreTeaching_RazorPages.Pages.Enrollments
 {
-#pragma warning disable CS8618
+
 
     public class GetEnrollmentsModel : PageModel
     {
         public IEnumerable<Enrollment> Enrollments { get; set; }
-        IEnrollmentService context;
-        public GetEnrollmentsModel(IEnrollmentService service)
+        IEnrollmentService service;
+        public GetEnrollmentsModel(IEnrollmentService serv)
         {
-            context = service;
+            service = serv;
+            Enrollments = new List<Enrollment>();
         }
         public void OnGet()
         {
-            Enrollments = context.GetEnrollments();
+            Enrollments = service.GetEnrollments();
         }
     }
 
-#pragma warning restore CS8618
+
 }

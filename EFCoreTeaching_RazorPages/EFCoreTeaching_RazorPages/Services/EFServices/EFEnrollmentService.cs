@@ -7,9 +7,9 @@ namespace EFCoreTeaching_RazorPages.Services.EFServices
     {
 
         RegistrationDBContext context;
-        public EFEnrollmentService(RegistrationDBContext service)
+        public EFEnrollmentService(RegistrationDBContext cont)
         {
-            context = service;
+            context = cont;
         }
         public IEnumerable<Enrollment> GetEnrollments()
         {

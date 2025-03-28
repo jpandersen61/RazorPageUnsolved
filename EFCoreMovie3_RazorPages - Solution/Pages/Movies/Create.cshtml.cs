@@ -14,6 +14,7 @@ namespace EFCoreMovie3_RazorPages_Solution.Pages.Movies
         public CreateModel(IMovieService service) 
         {
             this.service=service;
+            Movie = new Movie();
         }
 
         [BindProperty]

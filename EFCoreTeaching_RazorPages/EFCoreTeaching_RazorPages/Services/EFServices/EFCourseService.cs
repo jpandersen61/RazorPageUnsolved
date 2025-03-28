@@ -6,9 +6,9 @@ namespace EFCoreTeaching_RazorPages.Services.EFServices
     public class EFCourseService : ICourseService
     {
         RegistrationDBContext context;
-        public EFCourseService(RegistrationDBContext service)
+        public EFCourseService(RegistrationDBContext cont)
         {
-            context = service;
+            context = cont;
         }
     }
 }

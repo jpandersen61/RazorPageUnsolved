@@ -8,9 +8,9 @@ namespace EFCoreTeaching_RazorPages.Services.EFServices
     public class EFStudentService : IStudentService
     {
         RegistrationDBContext context;
-        public EFStudentService(RegistrationDBContext service)
+        public EFStudentService(RegistrationDBContext cont)
         {
-            context = service;
+            context = cont;
         }
         public IEnumerable<Student> GetStudents()
         {

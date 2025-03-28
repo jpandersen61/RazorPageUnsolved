@@ -16,11 +16,11 @@ namespace EFCoreMovie1_RazorPages.Pages.Movies
             this.service = service;
         }
         public IEnumerable<Movie> Movies { get; set; } = new List<Movie>();
-        public void OnGet()
+        public void OnGet(int ? sid)
         {
             if (String.IsNullOrEmpty(FilterCriteria))
             {
-                Movies = service.GetMovies();
+                Movies = service.GetMovies(sid);
             }
             else
             {

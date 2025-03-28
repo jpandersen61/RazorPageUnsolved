@@ -38,7 +38,8 @@
                     <td>
                         <p>
                             <a asp-page="Delete" asp-route-id="@item.Id">Delete</a> |
-                            <a asp-page="/Movies/Create" asp-route-id="@item.Id">Create Movie</a>
+                            <a asp-page="/Movies/Create" asp-route-id="@item.Id">Create Movie</a> |
+                            <a asp-page="/Movies/GetMovies" asp-route-sid="@item.Id">Movies</a>
                         </p>
 
                     </td>

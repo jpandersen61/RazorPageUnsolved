@@ -4,9 +4,6 @@
 }
 
 <h1>List of movies</h1>
-<p>
-    <a asp-page="/Movies/Create">Create New Movie</a>
-</p>
 <form>
     <p>
         Search: <input type="text" asp-for="FilterCriteria" />
@@ -22,6 +19,8 @@
             <th>Title</th>
             <th>Year</th>
             <th>Running time (min)</th>
+            <th>Studio ID</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -35,6 +34,13 @@
                     <td> @item.Title </td>
                     <td> @item.Year  </td>
                     <td> @item.RunningTimeInMins </td>
+                    <td> @item.StudioId </td>
+                    <td>
+                        <p>
+                            <a asp-page="Delete" asp-route-id="@item.Id">Delete</a>
+                        </p>
+
+                    </td>
                 </tr>
             }
         }

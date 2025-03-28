@@ -24,7 +24,7 @@ namespace EFCoreMovie3_RazorPages.EFServices
             dbContext.SaveChanges();
         }
 
-        public Studio GetStudioById(int id)
+        public Studio ? GetStudioById(int id)
         {
             return dbContext.Studios.FirstOrDefault<Studio>(s => s.Id == id);
         }

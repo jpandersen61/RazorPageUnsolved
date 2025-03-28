@@ -7,5 +7,11 @@ namespace EFCoreMovie3_RazorPages.Interfaces
         public IEnumerable<Movie> GetMovies();
         IEnumerable<Movie> GetMovies(string title);
         void AddMovie(Movie movie);
+
+        public IEnumerable<Movie> GetMovies(int ? studioId);
+
+        public Movie ? GetMovieById(int id);
+
+        public void DeleteMovie(Movie movie);
     }
 }

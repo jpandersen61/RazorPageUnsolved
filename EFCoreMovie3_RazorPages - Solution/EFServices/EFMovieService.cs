@@ -18,6 +18,17 @@ namespace EFCoreMovie3_RazorPages.EFServices
             dbContext.SaveChanges();
         }
 
+        public void DeleteMovie(Movie movie)
+        {
+            dbContext.Movies.Remove(movie); ;
+            dbContext.SaveChanges();
+        }
+
+        public Movie ? GetMovieById(int sid)
+        {
+            return dbContext.Movies.FirstOrDefault(m => m.Id == sid);
+        }
+
         public IEnumerable<Movie> GetMovies()
         {
             return dbContext.Movies;
@@ -25,7 +36,19 @@ namespace EFCoreMovie3_RazorPages.EFServices
 
         public IEnumerable<Movie> GetMovies(string title)
         {
-            return dbContext.Movies.Where(m => m.Title.StartsWith(title)).AsNoTracking().ToList();
+            return dbContext.Movies.Where(m => m.Title.ToLower().StartsWith(title.ToLower())).AsNoTracking().ToList();
+        }
+
+        public IEnumerable<Movie> GetMovies(int? studioId)
+        {
+            if (studioId == null)
+            {
+                return dbContext.Movies;
+            }
+            else
+            {
+                return dbContext.Movies.Where(m => m.StudioId == studioId).AsNoTracking().ToList();
+            }
         }
     }
 }
