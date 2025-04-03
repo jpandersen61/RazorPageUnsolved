@@ -1,0 +1,36 @@
+﻿@page
+@model EFCoreHotel_RazorPages.Pages.Hotels.GetHotelsModel
+@{
+    ViewData["Title"] = "GetHotels";
+}
+
+<h1>List of Hotels</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th> Hotel Id  </th>
+            <th> Name </th>
+            <th> Address  </th>
+            <th> </th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @if (Model.Hotels != null)
+        {
+            @foreach (var item in Model.Hotels)
+            {
+                <tr>
+                    <td>@item.HotelNo  </td>
+                    <td>  @item.Name </td>
+                    <td>  @item.Address </td>
+                    <td>
+                        <p>
+                            <a asp-page="GetHotelDetails" asp-route-hno="@item.HotelNo">Details</a>
+                        </p>
+
+                    </td>
+                </tr>
+            }
+        }
+</table>

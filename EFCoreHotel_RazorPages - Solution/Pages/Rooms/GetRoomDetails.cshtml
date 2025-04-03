@@ -1,0 +1,66 @@
+﻿@page
+@model EFCoreHotel_RazorPages_Solution.Pages.Rooms.GetRoomDetailsModel
+@{
+}
+
+<h1>Room details</h1>
+
+<dl class="row">
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.Room.HotelNoNavigation.Name)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.Room.HotelNoNavigation.Name)
+    </dd>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.Room.RoomNo)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.Room.RoomNo)
+    </dd>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.Room.Types)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.Room.Types)
+    </dd>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.Room.Price)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.Room.Price)
+    </dd>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.Room.Bookings)
+    </dt>
+    <dd class="col-sm-10">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Guest No</th>
+                    <th>Date from</th>
+                    <th>Date to</th>
+                    <th>Hotel No</th>
+                    <th>Guest Name</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @if (Model.Room != null && Model.Room.Bookings != null)
+                {
+                    @foreach (var item in Model.Room.Bookings)
+                    {
+                        <tr>
+                            <td>  @item.GuestNo  </td>
+                            <td>  @item.DateFrom.ToString("dd-MM-yyyy") </td>
+                            <td>  @item.DateTo.Date.ToString("dd-MM-yyyy") </td>
+                            <td>  @item.HotelNo </td>
+                            <td>  @item.GuestNoNavigation.Name </td>
+                        </tr>
+                    }
+                }
+        </table>
+    </dd>
+</dl>
+
+

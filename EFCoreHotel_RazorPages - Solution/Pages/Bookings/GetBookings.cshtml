@@ -1,0 +1,46 @@
+﻿@page
+@model EFCoreHotel_RazorPages.Pages.Bookings.GetBookingsModel
+@{
+    ViewData["Title"] = "GetBookings";
+}
+
+<form>
+    <p>
+        Date (from): <input type="date" asp-for="DateFrom" />
+        Date (to): <input type="date" asp-for="DateTo" />
+        <input type="submit" value="Filter" />
+        <div asp-validation-summary="All" class="text-danger">
+        </div>
+        <a asp-page="GetBookings">Back to Full List </a>
+    </p>
+</form>
+
+<h4 style="color:red"> List of bookings</h4>
+<table class="table">
+    <thead>
+        <tr>
+            <th> Booking Id  </th>
+            <th> From  </th>
+            <th> To  </th>
+            <th> Hotel No  </th>
+            <th> Room No  </th>
+            <th> Guest No  </th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @if (Model.Bookings != null)
+        {
+            @foreach (var item in Model.Bookings)
+            {
+                <tr>
+                    <td>  @item.BookingId</td>
+                    <td>  @item.DateFrom  </td>
+                    <td>  @item.DateTo </td>
+                    <td>  @item.HotelNo </td>
+                    <td>  @item.RoomNo </td>
+                    <td>  @item.GuestNo </td>
+                </tr>
+            }
+        }
+</table>
